@@ -3,15 +3,15 @@
 # Uncomment this line if you're using Swift
 use_frameworks!
 
-target 'Instagram2.0' do
+target 'Instagram2' do
     pod 'Parse'
 end
 
-target 'Instagram2.0Tests' do
+target 'Instagram2Tests' do
 
 end
 
-target 'Instagram2.0UITests' do
+target 'Instagram2UITests' do
 
 end
 

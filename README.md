@@ -2,7 +2,7 @@
 
 **Instagram2.0** is a photo sharing app using Parse as its backend.
 
-Time spent: **.5** hours spent in total
+Time spent: **2.5** hours spent in total
 
 ## User Stories
 

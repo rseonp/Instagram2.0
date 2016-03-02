@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
         Parse.initializeWithConfiguration(
             ParseClientConfiguration(block: { (configuration:ParseMutableClientConfiguration) -> Void in
                 configuration.applicationId = "Instagram"
@@ -23,6 +24,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 configuration.server = "https://hidden-waters-14927.herokuapp.com/parse"
             })
         )
+        
+        // check if user is logged in.
+        if PFUser.currentUser() != nil {
+            print("current user detected")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("TabBarController")
+            
+            window?.rootViewController = vc
+            // if there is a logged in user then load the home view controller
+        }
         
         // Override point for customization after application launch.
         return true
